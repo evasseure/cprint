@@ -6,7 +6,7 @@ cprint is a small and simple python library which gives you the possibility to p
 
 ## Install
 
-Not yet  
+python setup.py install  
 
 ## Usage
 

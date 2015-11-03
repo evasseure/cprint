@@ -59,7 +59,7 @@ class cprint(object):
         """
         print(cprint.colors['ERR'] + str + cprint.colors['ENDC'], file=sys.stderr)
         if interrupt:
-            print(cprint.colors['FATAL'] + "Error: Program stopped." + cprint.colors['ENDC'], file=sys.stderr)
+            print(cprint.colors['ERR'] + "Error: Program stopped." + cprint.colors['ENDC'], file=sys.stderr)
             exit(1)
 
     @staticmethod
