@@ -17,3 +17,4 @@ Not yet
     cprint.fatal(str, interrupt=False)		# RED
 ```
 
+![Demo](/img/screen.png)
