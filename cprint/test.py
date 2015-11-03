@@ -8,4 +8,3 @@ if __name__ == '__main__':
     cprint.warn("cprint.warn(str)")
     cprint.err("cprint.err(str)")
     cprint.fatal("cprint.fatal(str)")
-    cprint.fatal("cprint.fatal(str, interrupt=True)", True)

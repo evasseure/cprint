@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/EVasseure/cprint.svg?branch=master)](https://travis-ci.org/EVasseure/cprint)
+
 ## Cprint
 
 cprint is a small and simple python library which gives you the possibility to print in color.  
