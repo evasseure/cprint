@@ -9,5 +9,6 @@ python:
   - "3.5-dev" # 3.5 development branch
   - "nightly" # currently points to 3.6-dev
 # command to run tests
-script: "python setup.py install"
+install:
+  - python setup.py -q install
 script: "python tests/test.py"
