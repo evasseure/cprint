@@ -2,7 +2,8 @@
 
 ## Cprint
 
-cprint is a small and simple python library which gives you the possibility to print in color.  
+Do you find it annoying when you have to search for a certain debug, or error, line in your console? Have you ever dreamed of a simple and quick way to make your debug print truly visible? Well here is your solution !  
+cprint is a minimalist python library which gives you the possibility to print in color.  
 
 ## Install
 
