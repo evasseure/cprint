@@ -1,5 +1,5 @@
+# coding: utf8
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 """
     Usage:
         >>> from cprint import *
@@ -14,13 +14,13 @@ import sys
 class cprint(object):
 
     colors = {
-        'NONE': '\033[0m',
-        'OK': '\033[94m',
-        'INFO': '\033[92m',
-        'WARNING': '\033[93m',
-        'ERR': '\033[91m',
-        'FATAL': '\033[31m',
-        'ENDC': '\033[0m'
+        'NONE': u'\033[0m',
+        'OK': u'\033[94m',
+        'INFO': u'\033[92m',
+        'WARNING': u'\033[93m',
+        'ERR': u'\033[91m',
+        'FATAL': u'\033[31m',
+        'ENDC': u'\033[0m'
     }
 
     def __init__(self, str):

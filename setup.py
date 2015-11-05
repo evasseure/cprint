@@ -10,7 +10,7 @@ setup(
     version=cprint.__version__,
     author='Erwan Vasseure',
     description='Printing and debugging with color',
-    long_description=open('README.md').read(),
+    long_description='Printing and debugging with color',
     url='https://github.com/EVasseure/cprint',
     include_package_data=True,
     packages=['cprint'],
