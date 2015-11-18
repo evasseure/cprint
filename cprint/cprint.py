@@ -7,20 +7,20 @@
         >>> ...
 """
 
-from __future__ import print_function
+from __future__ import print_function, unicode_literals
 import sys
 
 
 class cprint(object):
 
     colors = {
-        'NONE': u'\033[0m',
-        'OK': u'\033[94m',
-        'INFO': u'\033[92m',
-        'WARNING': u'\033[93m',
-        'ERR': u'\033[91m',
-        'FATAL': u'\033[31m',
-        'ENDC': u'\033[0m'
+        'NONE': '\033[0m',
+        'OK': '\033[94m',
+        'INFO': '\033[92m',
+        'WARNING': '\033[93m',
+        'ERR': '\033[91m',
+        'FATAL': '\033[31m',
+        'ENDC': '\033[0m'
     }
 
     def __init__(self, str):
@@ -30,37 +30,44 @@ class cprint(object):
         print(str, file=sys.stdout)
         del self
 
-    @staticmethod
-    def ok(str):
+    # FIMXE Find a more elegent way to check if unicode
+    @classmethod
+    def _get_repr(cls, arg):
+        if isinstance(arg, str) or repr(arg)[0:2] == 'u"':
+            return arg
+        return repr(arg)
+
+    @classmethod
+    def ok(cls, arg):
         """
             Prints in blue to stdout
         """
-        print(cprint.colors['OK'] + str + cprint.colors['ENDC'],
+        print(cprint.colors['OK'] + cls._get_repr(arg) + cprint.colors['ENDC'],
               file=sys.stdout)
 
-    @staticmethod
-    def info(str):
+    @classmethod
+    def info(cls, arg):
         """
             Prints in green to stdout
         """
-        print(cprint.colors['INFO'] + str + cprint.colors['ENDC'],
+        print(cprint.colors['INFO'] + cls._get_repr(arg) + cprint.colors['ENDC'],
               file=sys.stdout)
 
-    @staticmethod
-    def warn(str):
+    @classmethod
+    def warn(cls, arg):
         """
             Prints in yellow to strerr
         """
-        print(cprint.colors['WARNING'] + str + cprint.colors['ENDC'],
+        print(cprint.colors['WARNING'] + cls._get_repr(arg) + cprint.colors['ENDC'],
               file=sys.stderr)
 
-    @staticmethod
-    def err(str, interrupt=False):
+    @classmethod
+    def err(cls, arg, interrupt=False):
         """
             Prints in brown to stderr
             interrupt=True: stops the program
         """
-        print(cprint.colors['ERR'] + str + cprint.colors['ENDC'],
+        print(cprint.colors['ERR'] + cls._get_repr(arg) + cprint.colors['ENDC'],
               file=sys.stderr)
         if interrupt:
             print(cprint.colors['ERR'] + "Error: Program stopped." +
@@ -68,13 +75,13 @@ class cprint(object):
                   file=sys.stderr)
             exit(1)
 
-    @staticmethod
-    def fatal(str, interrupt=False):
+    @classmethod
+    def fatal(cls, arg, interrupt=False):
         """
             Prints in red to stderr
             interrupt=True: stops the program
         """
-        print(cprint.colors['FATAL'] + str + cprint.colors['ENDC'],
+        print(cprint.colors['FATAL'] + cls._get_repr(arg) + cprint.colors['ENDC'],
               file=sys.stderr)
         if interrupt:
             print(cprint.colors['FATAL'] + "Fatal error: Program stopped." +

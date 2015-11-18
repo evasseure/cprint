@@ -6,4 +6,4 @@ from .cprint import *
     This module give to possibility to print in color.
 """
 
-__version__ = "1"
+__version__ = "1.1"
