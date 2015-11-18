@@ -54,13 +54,15 @@ def test_print_tuple():
     p(('t1', 't2', 't3'))
     return
 
-def test_print_tuple():
-    """ Testing cprint with tuple. """
-    p(('t1', 't2', 't3'))
-    return
 
 def test_print_object():
     """ Testing cprint with object. """
     o = TestClass()
     p(o)
     return
+
+cprint('str')
+cprint.ok('été')
+cprint.info(('t1', 't2', 't3'))
+cprint.warn(['l1', 'l2', 'l3'])
+cprint.err({ 'key': 'value'})

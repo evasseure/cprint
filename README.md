@@ -14,12 +14,12 @@ pip install cprint
 ```python
 from cprint import *
 
-cprint(str) 							# WHITE
-cprint.ok(str)							# BLUE
-cprint.info(str)						# GREEN
-cprint.warn(str)						# YELLOW
-cprint.err(str, interrupt=False)		# BROWN
-cprint.fatal(str, interrupt=False)		# RED
+cprint(arg) 							# WHITE
+cprint.ok(arg)							# BLUE
+cprint.info(arg)						# GREEN
+cprint.warn(arg)						# YELLOW
+cprint.err(arg, interrupt=False)		# BROWN
+cprint.fatal(arg, interrupt=False)		# RED
 ```
 
 ![Demo](/img/screen.png)
