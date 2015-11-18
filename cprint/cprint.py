@@ -88,10 +88,3 @@ class cprint(object):
                   cprint.colors['ENDC'],
                   file=sys.stderr)
             exit(1)
-
-cprint("cprint(arg)")
-cprint.ok("cprint.ok(arg)")
-cprint.info("cprint.info(arg)")
-cprint.warn("cprint.warn(arg)")
-cprint.err("cprint.err(arg, interrupt=False)", interrupt=False)
-cprint.fatal("cprint.fatal(arg, interrupt=True) ", interrupt=True) 
