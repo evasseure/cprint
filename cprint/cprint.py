@@ -30,10 +30,9 @@ class cprint(object):
         print(str, file=sys.stdout)
         del self
 
-    # FIMXE Find a more elegent way to check if unicode
     @classmethod
     def _get_repr(cls, arg):
-        if isinstance(arg, str) or repr(arg)[0:2] == 'u"':
+        if isinstance(arg, basestring):
             return arg
         return repr(arg)
 
