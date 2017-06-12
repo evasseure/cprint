@@ -32,7 +32,7 @@ class cprint(object):
 
     @classmethod
     def _get_repr(cls, arg):
-        if isinstance(arg, basestring):
+        if isinstance(arg, str):
             return arg
         return repr(arg)
 
