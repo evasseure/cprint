@@ -23,3 +23,5 @@ cprint.fatal(arg, interrupt=False)		# RED
 ```
 
 ![Demo](/img/screen.png)
+
+In case you have issues under Windows, try installing colorama with `pip install colorama`.
