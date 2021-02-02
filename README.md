@@ -6,9 +6,9 @@ Do you find it annoying when you have to search for a certain debug, or error, l
 cprint is a minimalist python library which gives you the possibility to print in color.  
 
 ## Install
-
+```
 pip install cprint
-
+```
 ## Usage
 
 ```python
