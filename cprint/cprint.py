@@ -61,7 +61,7 @@ class cprint(object):
               file=sys.stderr, *args, **kwargs)
 
     @classmethod
-    def err(cls, arg, interrupt=False, *args, **kwargs):
+    def err(cls, arg, interrupt=False, fatal_message="Fatal error: Program stopped.", *args, **kwargs):
         """
             Prints in brown to stderr
             interrupt=True: stops the program
@@ -69,13 +69,13 @@ class cprint(object):
         print(cprint.colors['ERR'] + cls._get_repr(arg) + cprint.colors['ENDC'],
               file=sys.stderr, *args, **kwargs)
         if interrupt:
-            print(cprint.colors['ERR'] + "Error: Program stopped." +
+            print(cprint.colors['ERR'] + fatal_message +
                   cprint.colors['ENDC'],
                   file=sys.stderr)
             exit(1)
 
     @classmethod
-    def fatal(cls, arg, interrupt=False, *args, **kwargs):
+    def fatal(cls, arg, interrupt=False, fatal_message="Fatal error: Program stopped.", *args, **kwargs):
         """
             Prints in red to stderr
             interrupt=True: stops the program
@@ -83,7 +83,7 @@ class cprint(object):
         print(cprint.colors['FATAL'] + cls._get_repr(arg) + cprint.colors['ENDC'],
               file=sys.stderr, *args, **kwargs)
         if interrupt:
-            print(cprint.colors['FATAL'] + "Fatal error: Program stopped." +
+            print(cprint.colors['FATAL'] + fatal_message +
                   cprint.colors['ENDC'],
                   file=sys.stderr)
             exit(1)
