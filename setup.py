@@ -9,6 +9,8 @@ setup(
     name='cprint',
     version=cprint.__version__,
     author='Erwan Vasseure',
+    author_email='e.vasseure@gmail.com',
+    license='MIT',
     description='Printing and debugging with color',
     long_description='Printing and debugging with color',
     url='https://github.com/EVasseure/cprint',
