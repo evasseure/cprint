@@ -1,9 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from distutils.core import setup
+from setuptools import setup
 
 import cprint
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
 setup(
     name='cprint',
@@ -12,7 +15,8 @@ setup(
     author_email='e.vasseure@gmail.com',
     license='MIT',
     description='Printing and debugging with color',
-    long_description='Printing and debugging with color',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     url='https://github.com/EVasseure/cprint',
     include_package_data=True,
     packages=['cprint'],
