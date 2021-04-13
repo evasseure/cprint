@@ -87,3 +87,5 @@ class cprint(object):
                   cprint.colors['ENDC'],
                   file=sys.stderr)
             exit(1)
+    warning = warn
+    error = err
